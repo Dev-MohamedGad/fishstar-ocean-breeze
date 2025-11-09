@@ -57,6 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        ocean: {
+          light: "hsl(var(--ocean-light))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+      },
+      fontFamily: {
+        cairo: ['Cairo', 'sans-serif'],
+      },
+      backgroundImage: {
+        'ocean-gradient': 'var(--ocean-gradient)',
       },
       borderRadius: {
         lg: "var(--radius)",
