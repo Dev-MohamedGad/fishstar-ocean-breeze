@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     --ocean-gradient: linear-gradient(135deg, hsl(210 80% 23%), hsl(195 100% 46%));
-    --ocean-light: 195 100% 96%;
+    --ocean-light: 195 50% 92%;
     --gold: 51 100% 50%;
     --gold-light: 51 100% 95%;
 

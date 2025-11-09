@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-seafood.jpg";
+import heroImage from "@/assets/hero-section.jpeg";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -27,42 +27,23 @@ const HeroSection = () => {
       </motion.div>
 
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6"
-        >
-          نجمة السمك للمأكولات البحرية
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-2xl md:text-3xl text-primary-foreground/95 mb-10 font-semibold"
-        >
-          نكهات البحر.. على أصولها
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.8 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
           <Button
             size="lg"
             onClick={() => scrollToSection("#menu")}
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            className="bg-white text-primary font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-3xl hover:bg-white/95 transition-all hover:scale-105 border-2 border-white"
           >
             قائمة الطعام
           </Button>
           <Button
             size="lg"
-            variant="outline"
             onClick={() => scrollToSection("#contact")}
-            className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-bold text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105"
+            className="bg-primary/90 backdrop-blur-sm text-white border-2 border-white/50 font-bold text-lg px-8 py-6 rounded-full shadow-2xl hover:shadow-3xl hover:bg-primary transition-all hover:scale-105"
           >
             تواصل معنا
           </Button>
@@ -74,9 +55,9 @@ const HeroSection = () => {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-primary-foreground rounded-full flex items-start justify-center p-2">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex items-start justify-center p-2">
           <motion.div
-            className="w-1.5 h-1.5 bg-primary-foreground rounded-full"
+            className="w-1.5 h-1.5 bg-white rounded-full"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           />

@@ -24,7 +24,7 @@ const SplashScreen = ({ onComplete }: SplashScreenProps) => {
         <motion.img
           src={logo}
           alt="نجمة السمك"
-          className="w-32 h-32 mx-auto mb-6"
+          className="w-32 h-32 mx-auto mb-6 rounded-full object-cover"
           initial={{ scale: 0, rotate: -180 }}
           animate={{ scale: 1, rotate: 0 }}
           transition={{ duration: 1, type: "spring" }}
