@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
@@ -46,17 +47,21 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
+            <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Mobile Menu Button & Theme Toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
