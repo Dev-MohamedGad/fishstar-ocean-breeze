@@ -33,8 +33,8 @@ const menuItems = [
   },
   {
     id: 5,
-    name: "كبسة روبيان",
-    description: "كبسة بالروبيان الطازج والتوابل الشرقية",
+    name: "أزر بالروبيان",
+    description: "أرز بالروبيان الطازج والتوابل الشرقية",
     image: seafoodRice,
   },
   {
