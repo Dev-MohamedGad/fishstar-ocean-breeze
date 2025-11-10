@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import grilledFish from "@/assets/grilled-fish.jpg";
+import grilledFish2 from "@/assets/grilled-fish-2.jpg";
 import friedShrimp from "@/assets/fried-shrimp.jpg";
 import seafoodRice from "@/assets/seafood-rice.jpg";
 
@@ -11,34 +12,28 @@ const menuItems = [
     id: 1,
     name: "سمك مشوي",
     description: "سمك طازج مشوي على الفحم مع الليمون والأعشاب",
-    image: grilledFish,
+    image: grilledFish2,
   },
   {
     id: 2,
-    name: "جمبري مقلي",
-    description: "جمبري مقرمش محضر بطريقة احترافية",
-    image: friedShrimp,
-  },
-  {
-    id: 3,
     name: "أرز بالمأكولات البحرية",
     description: "أرز بسمتي مع خلطة مميزة من المأكولات البحرية",
     image: seafoodRice,
   },
   {
-    id: 4,
+    id: 3,
     name: "سمك سلمون مشوي",
     description: "شرائح سلمون طازجة مشوية بصوص خاص",
     image: grilledFish,
   },
   {
-    id: 5,
+    id: 4,
     name: "أزر بالروبيان",
     description: "أرز بالروبيان الطازج والتوابل الشرقية",
     image: seafoodRice,
   },
   {
-    id: 6,
+    id: 5,
     name: "حبار مقلي",
     description: "حلقات حبار مقرمشة مع صوص التارتار",
     image: friedShrimp,

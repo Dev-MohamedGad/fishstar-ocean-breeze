@@ -1,26 +1,11 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { Phone, MapPin, Clock, Send, Instagram, MessageCircle, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
+import { useRef } from "react";
+import { Phone, MapPin, Clock, Instagram, MessageCircle, ExternalLink } from "lucide-react";
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("تم إرسال رسالتك بنجاح! سنتواصل معك قريباً");
-    setFormData({ name: "", email: "", message: "" });
-  };
 
   return (
     <section id="contact" ref={ref} className="py-20 bg-background">
@@ -40,10 +25,10 @@ const ContactSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-8"
           >
@@ -148,70 +133,6 @@ const ContactSection = () => {
               </div>
             </motion.div>
           </motion.div>
-
-          <motion.form
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            onSubmit={handleSubmit}
-            className="space-y-6 p-8 bg-ocean-light rounded-2xl text-foreground"
-          >
-            <div>
-              <label className="block text-foreground font-semibold mb-2">
-                الاسم
-              </label>
-              <Input
-                required
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                placeholder="أدخل اسمك الكامل"
-                className="bg-background"
-              />
-            </div>
-
-            <div>
-              <label className="block text-foreground font-semibold mb-2">
-                البريد الإلكتروني
-              </label>
-              <Input
-                required
-                type="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData({ ...formData, email: e.target.value })
-                }
-                placeholder="your@email.com"
-                className="bg-background"
-                dir="ltr"
-              />
-            </div>
-
-            <div>
-              <label className="block text-foreground font-semibold mb-2">
-                الرسالة
-              </label>
-              <Textarea
-                required
-                value={formData.message}
-                onChange={(e) =>
-                  setFormData({ ...formData, message: e.target.value })
-                }
-                placeholder="اكتب رسالتك هنا..."
-                className="bg-background min-h-32 resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-bold text-lg gap-2 group"
-            >
-              إرسال الرسالة
-              <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </motion.form>
         </div>
 
         <motion.div
